@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
     choice = argv[3][0];
     b = atoi(argv[4]);
   }
-  printf("you operator: %c.\n", choice);
+  // printf("you operator: %c.\n", choice);
   // Evaluate operation based on user's choice.
   int result; 
   switch (choice){
