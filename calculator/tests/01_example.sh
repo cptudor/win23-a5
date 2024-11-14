@@ -31,7 +31,13 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
 fi
 
 # Test 04: Ensure program does negative numbers
-if [[ $($CALCULATOR -5 - -2) -eq -3 ]]; then
+if [[ $($CALCULATOR -q -5 - -2) -eq -3 ]]; then
   echo 'NICE! -5 - -2 = -3!'
   exit 0
+fi
+
+# Test 05: Ensure program does something
+if [[ $($CALCULATOR -q 15 + 15) -ne 30 ]]; then
+  echo 'WTF! 15 + 15 = 30!'
+  exit 1
 fi
