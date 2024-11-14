@@ -29,3 +29,9 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# Test 04: Ensure program does negative numbers
+if [[ $($CALCULATOR -5 - -2) -eq -3 ]]; then
+  echo 'NICE! -5 - -2 = -3!'
+  exit 0
+fi
